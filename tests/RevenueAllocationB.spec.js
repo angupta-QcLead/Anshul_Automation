@@ -42,7 +42,7 @@ test('Save query to SQL file - RevenueAllocationB', async () => {
 
   // Overwrite the SQL file with the current queryText
   fs.writeFileSync(queryFilePath, queryText.trim(), 'utf8');
-  console.log(`✅ Query saved to: ${queryFilePath}`);
+  console.log(`✅ Query saved to the : ${queryFilePath}`);
 });
 
 test('Run SQL and compare Known vs Test - RevenueAllocationB', async () => {
