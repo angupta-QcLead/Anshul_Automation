@@ -1,0 +1,18 @@
+🔍 Config passed to sql.connect: {
+  user: 'alliant_batch',
+  password: 'qssoqfz',
+  server: 'vsconfig07\\SQL22',
+  database: 'nxt_qc_test',
+  port: 59651,
+  options: { encrypt: true, trustServerCertificate: true }
+}
+✅ SQL Connection Established
+✅ Results saved to: S:\Anshul\Base Config Regression Testing\Test Results\From_Test\qc_compare_RevenueAllocationA.txt
+❌ Differences found! Showing mismatched values:
+┌─────────┬──────┬─────────────────────────────┬────────────────────────────────────┐
+│ (index) │ line │ known                       │ test                               │
+├─────────┼──────┼─────────────────────────────┼────────────────────────────────────┤
+│ 0       │ 3    │ '    "reportingperiod": ",' │ '    "reportingperiod": "202301",' │
+│ 1       │ 4    │ '    "actualperiod": "",'   │ '    "actualperiod": "202301",'    │
+└─────────┴──────┴─────────────────────────────┴────────────────────────────────────┘
+📄 Mismatch report saved: S:\Anshul\Base Config Regression Testing\Test Results\Reports\qc_compare_RevenueAllocationB_mismatches.json

@@ -1,0 +1,39 @@
+🔍 Config passed to sql.connect: {
+  user: 'alliant_batch',
+  password: 'qssoqfz',
+  server: 'vsconfig07\\SQL22',
+  database: 'nxt_qc_test',
+  port: 59651,
+  options: { encrypt: true, trustServerCertificate: true }
+}
+✅ SQL Connection Established
+✅ Results saved to: S:\Anshul\Base Config Regression Testing\Test Results\From_Test\qc_compare_RevenueAllocationA.txt
+❌ Differences found! Showing mismatched values:
+┌─────────┬──────┬─────────────────────────────┬─────────────────────────────────────────────────────┐
+│ (index) │ line │ known                       │ test                                                │
+├─────────┼──────┼─────────────────────────────┼─────────────────────────────────────────────────────┤
+│ 0       │ 3    │ '    "reportingperiod": ",' │ '    "reportingperiod": "202301",'                  │
+│ 1       │ 4    │ '    "actualperiod": "",'   │ '    "actualperiod": "202301",'                     │
+│ 2       │ 45   │ '    "reportingperiod": '   │ '    "reportingperiod": "202301",'                  │
+│ 3       │ 46   │ '    "actualperiod": '      │ '    "actualperiod": "202301",'                     │
+│ 4       │ 70   │ '    "Amount": '            │ '    "Amount": 90.23'                               │
+│ 5       │ 104  │ '    "CatlogType": "E1",'   │ '    "CatlogType": "Catalog E1",'                   │
+│ 6       │ 119  │ '    "Territory": '         │ '    "Territory": "USA",'                           │
+│ 7       │ 135  │ '    "Language": E",'       │ '    "Language": "Language E",'                     │
+│ 8       │ 137  │ '    "unit": -'             │ '    "unit": -62,'                                  │
+│ 9       │ 157  │ '    '                      │ '    "reportingperiod": "202301",'                  │
+│ 10      │ 158  │ ']'                         │ '    "actualperiod": "202301",'                     │
+│ 11      │ 159  │ ''                          │ '    "ActivityType": "BOM Allocation Unspecified",' │
+│ 12      │ 160  │ ''                          │ '    "CatlogType": "Unspecified",'                  │
+│ 13      │ 161  │ ''                          │ '    "Territory": "USA",'                           │
+│ 14      │ 162  │ ''                          │ '    "Media": "Media F",'                           │
+│ 15      │ 163  │ ''                          │ '    "Language": "Language F",'                     │
+│ 16      │ 164  │ ''                          │ '    "Bundle": "Bundle F",'                         │
+│ 17      │ 165  │ ''                          │ '    "unit": 23,'                                   │
+│ 18      │ 166  │ ''                          │ '    "Price1Retailprice": 19.91,'                   │
+│ 19      │ 167  │ ''                          │ '    "user_3_rate": 0,'                             │
+│ 20      │ 168  │ ''                          │ '    "Amount": 458'                                 │
+│ 21      │ 169  │ ''                          │ '  }'                                               │
+│ 22      │ 170  │ ''                          │ ']'                                                 │
+└─────────┴──────┴─────────────────────────────┴─────────────────────────────────────────────────────┘
+📄 Mismatch report saved: S:\Anshul\Base Config Regression Testing\Test Results\Reports\qc_compare_RevenueAllocationB_mismatches.json

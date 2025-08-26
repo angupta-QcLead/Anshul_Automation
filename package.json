@@ -1,0 +1,31 @@
+{
+  "name": "alliant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "codegen": "npx playwright codegen",
+    "test:clean": "rmdir /s /q allure-results && rmdir /s /q allure-report || echo clean",
+    "test:run": "npm run test:clean && npx playwright test --reporter=line,allure-playwright",
+    "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "allure:open": "allure open ./allure-report",
+    "allure:serve": "allure serve ./allure-results",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "clean:reports": "npx rimraf allure-results allure-report",
+    "test:allure": "npm run clean:reports && npx playwright test --reporter=line,allure-playwright"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "mssql": "^11.0.1"
+  }
+}

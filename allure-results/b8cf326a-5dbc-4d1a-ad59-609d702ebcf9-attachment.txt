@@ -1,0 +1,1 @@
+✅ Query saved to: S:\Anshul\Base Config Regression Testing\Test Files\SQL Queries\qc_compare_RevenueAllocationB.sql

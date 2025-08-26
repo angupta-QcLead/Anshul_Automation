@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","314","Compare RevenueAllocationA","","Thu Aug 21 02:51:53 PDT 2025","passed","Thu Aug 21 02:51:54 PDT 2025","","RevenueAllocationB.spec.js","",""
+"","582","Run SQL and compare Known vs Test","","Thu Aug 21 03:47:47 PDT 2025","passed","Thu Aug 21 03:47:48 PDT 2025","","RevenueAllocationB.spec.js","",""
+"","426","Run SQL and compare Known vs Test","","Thu Aug 21 03:57:33 PDT 2025","failed","Thu Aug 21 03:57:33 PDT 2025","","RevenueAllocationA.spec.js","",""
+"","113","Compare RevenueAllocationB","","Thu Aug 21 02:51:54 PDT 2025","passed","Thu Aug 21 02:51:54 PDT 2025","","RevenueAllocationB.spec.js","",""
+"","50","Save query to SQL file","","Thu Aug 21 03:47:47 PDT 2025","passed","Thu Aug 21 03:47:47 PDT 2025","","RevenueAllocationB.spec.js","",""
+"","17","Save query to SQL file","","Thu Aug 21 03:57:19 PDT 2025","passed","Thu Aug 21 03:57:19 PDT 2025","","RevenueAllocationA.spec.js","",""

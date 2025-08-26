@@ -1,0 +1,12 @@
+🔍 Config passed to sql.connect: {
+  user: 'alliant_batch',
+  password: 'qssoqfz',
+  server: 'vsconfig07\\SQL22',
+  database: 'nxt_qc_test',
+  port: 59651,
+  options: { encrypt: true, trustServerCertificate: true }
+}
+✅ SQL Connection Established
+✅ Results saved to: S:\Anshul\Base Config Regression Testing\Test Results\Known\qc_compare_RevenueAllocationB.txt
+✅ Results saved to: S:\Anshul\Base Config Regression Testing\Test Results\From_Test\qc_compare_RevenueAllocationB.txt
+✅ No difference found between Known and Test results.
