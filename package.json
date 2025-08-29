@@ -14,7 +14,9 @@
     "allure:serve": "allure serve ./allure-results",
     "allure:report": "npm run allure:generate && npm run allure:open",
     "clean:reports": "npx rimraf allure-results allure-report",
-    "test:allure": "npm run clean:reports && npx playwright test --reporter=line,allure-playwright"
+    "test:allure": "npm run clean:reports && npx playwright test --reporter=line,allure-playwright",
+    "test:bdd": "cucumber-js tests/Features --require tests/steps/**/*.js",
+    "test:cucumber": "cucumber-js tests/Features/*.Feature --require tests/steps/**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +24,9 @@
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "allure-commandline": "^2.34.1",
-    "allure-playwright": "^3.3.3"
+    "allure-playwright": "^3.3.3",
+    "@cucumber/cucumber": "^11.0.0",
+    "@cucumber/pretty-formatter": "^1.0.0"
   },
   "dependencies": {
     "chalk": "^4.1.2",

@@ -17,7 +17,7 @@ async function saveQueryResult(queryOrFilePath, outputFilePath, isQuery = false)
 }
 
 test('Save query to SQL file', async () => {
-  const SA = new ScopeA({ deal_sid: 4135 });
+  const SA = new royaltymodel({ deal_sid: 4135 });
   const queryText = SA.ScopeA();
 
   // Run the query to validate the deal id
