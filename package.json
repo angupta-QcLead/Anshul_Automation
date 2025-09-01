@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
+
   "scripts": {
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui",
