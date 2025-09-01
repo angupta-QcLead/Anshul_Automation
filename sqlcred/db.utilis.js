@@ -1,5 +1,5 @@
 // sqlcred/db.utilis.js
-const ConnectionPool = require('./connectionPool');
+const { ConnectionPool } = require('./connectionPool');
 
 const config = {
   user: 'alliant_batch',
@@ -19,4 +19,4 @@ async function runQuery(query) {
   return pool.runQuery(query);
 }
 
-module.exports = { runQuery };   // 👈 only export runQuery (hide config)
+module.exports = { runQuery };
