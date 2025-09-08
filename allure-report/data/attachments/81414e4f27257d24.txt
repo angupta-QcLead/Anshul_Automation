@@ -1,0 +1,3 @@
+✅ Rows returned for deal_sid 4134: 12
+✅ Results saved to: S:\Anshul\Base Config Regression Testing\Test Results\From_Test\qc_compare_RevenueAllocationB.txt
+✅ No difference found between Known and Test results.

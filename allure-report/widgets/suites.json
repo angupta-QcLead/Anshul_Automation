@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"fe515646702a8ded648dc306546266af","name":"RevenueAllocationA.spec.js","statistic":{"failed":1,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":2}}]}
+{"total":2,"items":[{"uid":"389491b0f511284095a3c01759ad90d4","name":"RevenueAllocationB.spec.js","statistic":{"failed":2,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":4}},{"uid":"fe515646702a8ded648dc306546266af","name":"RevenueAllocationA.spec.js","statistic":{"failed":1,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":2}}]}

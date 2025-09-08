@@ -1,6 +1,10 @@
 ﻿const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
+   reporter: [
+    ['list'], // keep console output
+    ['json', { outputFile: 'results/playwright-report.json' }] // ✅ add this
+  ],
   testDir: './tests',
   retries: 1,
   timeout: 30000,
