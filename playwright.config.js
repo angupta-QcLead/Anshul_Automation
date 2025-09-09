@@ -1,11 +1,8 @@
-﻿const { defineConfig } = require('@playwright/test');
+﻿// playwright.config.js
+const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-   reporter: [
-    ['list'], // keep console output
-    ['json', { outputFile: 'results/playwright-report.json' }] // ✅ add this
-  ],
-  testDir: './tests',
+  testDir: './tests',       // ✅ your tests folder
   retries: 1,
   timeout: 30000,
   use: {
@@ -16,7 +13,10 @@ module.exports = defineConfig({
     video: 'retain-on-failure',
   },
   reporter: [
-    ['line'], 
-    ['allure-playwright']
+    ['list'],                                      // console output
+    ['json', { outputFile: 'results/report.json' }], // JSON output
+    ['junit', { outputFile: 'results/test-results.xml' }], // 🔑 JUnit for Testmo
+    ['line'],                                     // simple line reporter
+    ['allure-playwright']                         // Allure integration
   ],
 });

@@ -4,31 +4,53 @@
   "description": "",
   "main": "index.js",
   "type": "commonjs",
-
   "scripts": {
     "test": "npx playwright test",
+
+    "ensure:results": "node ./scripts/ensure-results-dir.js",
+
+    "test:cucumber:json": "npm run ensure:results && npx cucumber-js --format json:results/cucumber-raw.json --parallel 1 tests/features",
+    "merge:cucumber": "node ./scripts/merge-cucumber-json.js",
+    "convert:cucumber": "node ./scripts/convert-cucumber-to-junit.js results/cucumber.json results/cucumber.xml",
+    "test:local": "npx rimraf results && npm run test:cucumber:json && npm run merge:cucumber && npm run convert:cucumber",
+
+    "testmo:run": "npm run test:local && npx testmo automation:run:submit --instance https://rightsline.testmo.net/ --project-id 14 --name \"Playwright Local Run\" --source local --results results/cucumber.xml",
+    "testmo:submit:single": "npx rimraf results/* && npx testmo automation:run:submit --instance https://rightsline.testmo.net/ --project-id 14 --name \"RevenueAllocationA Local Run\" --source local --results results/cucumber.xml -- node ./scripts/run-cuke-and-convert.js --features \"tests/features/RevenueAllocationA.feature\"",
+
+    "cuke:json": "node ./scripts/run-cuke-and-convert.js --features \"tests/features\"",
+    "cuke:json:file": "node ./scripts/run-cuke-and-convert.js --features \"tests/features/RevenueAllocationA.feature\"",
+    "cuke:with-playwright": "node ./scripts/run-cuke-and-convert.js --playwright --features \"tests/features\"",
+    "testmo:submit:cuke": "npx testmo automation:run:submit --instance https://rightsline.testmo.net/ --project-id 14 --name \"BDD Local Run\" --source local --results results/cucumber.xml -- node ./scripts/run-cuke-and-convert.js --features \"tests/features\"",
+
     "test:ui": "npx playwright test --ui",
     "codegen": "npx playwright codegen",
-    "test:clean": "rmdir /s /q allure-results && rmdir /s /q allure-report || echo clean",
+
+    "test:clean": "npx rimraf allure-results allure-report results || echo clean",
     "test:run": "npm run test:clean && npx playwright test --reporter=line,allure-playwright",
     "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
     "allure:open": "allure open ./allure-report",
     "allure:serve": "allure serve ./allure-results",
     "allure:report": "npm run allure:generate && npm run allure:open",
-    "clean:reports": "npx rimraf allure-results allure-report",
+    "clean:reports": "npx rimraf allure-results allure-report results",
     "test:allure": "npm run clean:reports && npx playwright test --reporter=line,allure-playwright",
-    "test:bdd": "cucumber-js tests/Features --require tests/steps/**/*.js",
-    "test:cucumber": "cucumber-js tests/Features/*.Feature --require tests/steps/**/*.js"
+
+    "test:bdd": "npx cucumber-js tests/features --require tests/steps/**/*.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "@playwright/test": "^1.54.2",
+    "@testmo/testmo-cli": "^1.4.4",
     "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.3.3",
-    "@cucumber/cucumber": "^11.0.0",
-    "@cucumber/pretty-formatter": "^1.0.0"
+    "cucumber-junit": "^1.5.0",
+    "cucumber-junit-convert": "^2.1.1",
+    "junit-report-builder": "^5.1.1",
+    "minimist": "^1.2.8",
+    "rimraf": "^5.0.0"
   },
   "dependencies": {
     "chalk": "^4.1.2",

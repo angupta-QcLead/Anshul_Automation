@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="1">
+  <testsuite name="Revenue Allocation A Validation" tests="3" failures="1">
+    <testcase classname="tests/features/RevenueAllocationA.feature:6::Compare RevenueAllocationA SQL results with known baseline" name="Given I have a valid RevenueAllocationA SQL query" time="0.022">
+      <system-out><![CDATA[Feature: Revenue Allocation A Validation
+Scenario: Compare RevenueAllocationA SQL results with known baseline
+Step: Given I have a valid RevenueAllocationA SQL query
+Status: passed]]></system-out>
+    </testcase>
+    <testcase classname="tests/features/RevenueAllocationA.feature:6::Compare RevenueAllocationA SQL results with known baseline" name="When I run the query and save the results" time="0.181">
+      <system-out><![CDATA[Feature: Revenue Allocation A Validation
+Scenario: Compare RevenueAllocationA SQL results with known baseline
+Step: When I run the query and save the results
+Status: passed]]></system-out>
+    </testcase>
+    <testcase classname="tests/features/RevenueAllocationA.feature:6::Compare RevenueAllocationA SQL results with known baseline" name="Then the results should match the known baseline" time="0.077">
+      <failure message="Then the results should match the known baseline"><![CDATA[AssertionError [ERR_ASSERTION]: There should be no mismatched lines
+
+5 !== 0
+
+    + expected - actual
+
+    -5
+    +0
+
+    at World.&lt;anonymous&gt; (S:\Anshul\Alliant\tests\steps\RevenueAllocationA.steps.js:122:10)]]></failure>
+      <system-out><![CDATA[Feature: Revenue Allocation A Validation
+Scenario: Compare RevenueAllocationA SQL results with known baseline
+Step: Then the results should match the known baseline
+Status: failed
+
+AssertionError [ERR_ASSERTION]: There should be no mismatched lines
+
+5 !== 0
+
+    + expected - actual
+
+    -5
+    +0
+
+    at World.<anonymous> (S:\Anshul\Alliant\tests\steps\RevenueAllocationA.steps.js:122:10)]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

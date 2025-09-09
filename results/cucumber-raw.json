@@ -1,0 +1,186 @@
+[
+  {
+    "description": "  As a QA Engineer\n  I want to validate RevenueAllocationA SQL results\n  So that I can ensure database outputs match known data",
+    "elements": [
+      {
+        "description": "",
+        "id": "revenue-allocation-a-validation;compare-revenueallocationa-sql-results-with-known-baseline",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Compare RevenueAllocationA SQL results with known baseline",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have a valid RevenueAllocationA SQL query",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationA.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52347300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I run the query and save the results",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationA.steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294605199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the results should match the known baseline",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationA.steps.js:91"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 107398500,
+              "error_message": "AssertionError [ERR_ASSERTION]: There should be no mismatched lines\n\n5 !== 0\n\n    + expected - actual\n\n    -5\n    +0\n\n    at World.<anonymous> (S:\\Anshul\\Alliant\\tests\\steps\\RevenueAllocationA.steps.js:122:10)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "revenue-allocation-a-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Revenue Allocation A Validation",
+    "tags": [],
+    "uri": "tests\\features\\RevenueAllocationA.feature"
+  },
+  {
+    "description": "  As a QA Engineer\n  I want to validate RevenueAllocationB SQL results\n  So that I can ensure database outputs match known data",
+    "elements": [
+      {
+        "description": "",
+        "id": "revenue-allocation-b-validation;compare-revenueallocationb-sql-results-with-known-baseline",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Compare RevenueAllocationB SQL results with known baseline",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have a valid RevenueAllocationB SQL query",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationB.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46224200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I run the query RevenueB and save the results",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationB.steps.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25660100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "RevenueAllocationB results should match the known baseline",
+            "match": {
+              "location": "tests\\steps\\RevenueAllocationB.steps.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68036599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "revenue-allocation-b-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Revenue Allocation B Validation",
+    "tags": [],
+    "uri": "tests\\features\\RevenueAllocationB.feature"
+  },
+  {
+    "description": "  As a QA Engineer\n  I want to validate Scope A SQL results\n  So that I can ensure database outputs match known data",
+    "elements": [
+      {
+        "description": "",
+        "id": "scope-a-comparing-known-and-test-file-and-find-difference;compare-scope-a-sql-results-with-known-baseline",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Compare Scope A SQL results with known baseline",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I have a valid ScopeA SQL query",
+            "match": {
+              "location": "tests\\steps\\ScopeAmatch.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20467599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I run the Scope A query and save the results",
+            "match": {
+              "location": "tests\\steps\\ScopeAmatch.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70796199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "ScopeA results should match the known baseline",
+            "match": {
+              "location": "tests\\steps\\ScopeAmatch.steps.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11052199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "scope-a-comparing-known-and-test-file-and-find-difference",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Scope A comparing known and Test file and find difference",
+    "tags": [],
+    "uri": "tests\\features\\ScopeA.feature"
+  }
+]
